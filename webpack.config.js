@@ -1,4 +1,4 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 const path = require('path');
 
 module.exports = {
@@ -11,8 +11,8 @@ module.exports = {
   entry: ['./app'],
 
   output: {
-    path: path.resolve('build/'),
-    publicPath: '/public/assets/',
+    path: path.resolve('build/js'),
+    publicPath: '/public/assets/js',
     filename: 'bundle.js'
   },
 
@@ -21,19 +21,17 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('style', 'css')
+        loader: 'style!css!postcss'
       },
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass')
+        loader: 'style!css!postcss!sass'
       }
     ]
   },
 
-  plugins: [
-    new ExtractTextPlugin('styles.css')
-  ],
+  postcss: () => [autoprefixer],
 
   resolve: {
     extensions: ['', '.js'] // default config. add more extensions when needed
