@@ -11,8 +11,8 @@ module.exports = {
   entry: ['./app'],
 
   output: {
-    path: path.resolve('build/js'),
-    publicPath: '/public/assets/js',
+    path: path.resolve('build/'),
+    publicPath: '/public/assets/',
     filename: 'bundle.js'
   },
 
@@ -27,6 +27,11 @@ module.exports = {
         test: /\.scss$/,
         exclude: /node_modules/,
         loader: 'style!css!postcss!sass'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        exclude: /node_modules/,
+        loader: 'url?limit=8192'
       }
     ]
   },
