@@ -1,4 +1,7 @@
 const path = require('path');
+const webpack = require('webpack');
+
+const commonsPlugin = new webpack.optimize.CommonsChunkPlugin('shared.js');
 
 module.exports = {
   context: path.resolve('js'),
@@ -7,12 +10,16 @@ module.exports = {
     contentBase: 'public'
   },
 
-  entry: ['./utils', './app'],
+  entry: {
+    about: './about_page.js',
+    contact: './contact_page.js',
+    home: './home_page.js'
+  },
 
   output: {
     path: path.resolve('build/js/'),
     publicPath: '/public/assets/js/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
 
   module: {
@@ -31,6 +38,8 @@ module.exports = {
       }
     ]
   },
+
+  plugins: [commonsPlugin],
 
   resolve: {
     extensions: ['', '.js'] // default config. add more extensions when needed
