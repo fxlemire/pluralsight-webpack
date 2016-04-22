@@ -17,7 +17,7 @@
   },
   "scripts": {
     "bundle:prod": "webpack -p --config webpack-production.config.js",
-    "start": "webpack-dev-server --inline",
+    "start": "webpack-dev-server -d --inline",
     "start:prod": "npm run-script bundle:prod && http-server",
     "test": "echo \"No tests specified.\" && exit 0",
     "postinstall": "npm run-script git:init",

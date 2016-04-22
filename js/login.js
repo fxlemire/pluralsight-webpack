@@ -4,4 +4,4 @@ function login(username, password) {
   }
 }
 
-login('admin', 'idunno');
+export {login};
