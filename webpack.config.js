@@ -1,6 +1,17 @@
+const path = require('path');
+
 module.exports = {
-  entry: ['./utils', './app.js'],
+  context: path.resolve('js'),
+
+  devServer: {
+    contentBase: 'public'
+  },
+
+  entry: ['./utils', './app'],
+
   output: {
+    path: path.resolve('build/js/'),
+    publicPath: '/public/assets/js/',
     filename: 'bundle.js'
   },
 
