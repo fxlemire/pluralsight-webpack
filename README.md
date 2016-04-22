@@ -11,7 +11,7 @@ that provide useful autocomplete features (IntelliSense) and some launch/task se
 # Installation
 
 ## Requirements
-* `npm install -g webpack`
+* `npm install -g webpack webpack-dev-server http-server`
 * `git clone git@github.com:fxlemire/pluralsight-webpack.git`
 * `npm install`
 
@@ -19,3 +19,7 @@ that provide useful autocomplete features (IntelliSense) and some launch/task se
 * `npm install -g typings`
 * `typings install`
 * Install ESLint extension (`CTRL+P` + `'ext install ESLint'`)
+
+## Launch server
+* DEV: `npm start` then go to `localhost:8080` on your browser
+* PROD: `npm run start:prod` then go to `localhost:8080` on your browser
