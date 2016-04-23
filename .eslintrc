@@ -1,9 +1,13 @@
 {
   "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaFeatures": {}
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "plugins": [],
+  "plugins": [
+    "react"
+  ],
   "ecmaVersion": 7,
   "rules": {
     // BEST PRACTICES
@@ -103,6 +107,7 @@
     "id-length": 0,
     "id-match": 0,
     "indent": [2, 2, {"SwitchCase": 0}],
+    "jsx-quotes": [2, "prefer-double"],
     "key-spacing": [2, {"beforeColon": false, "afterColon": true}],
     "keyword-spacing": 2,
     "linebreak-style": 0,
@@ -190,7 +195,8 @@
     "yield-star-spacing": [2, {"before": false, "after": true}]
   },
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
   "env": {
     "browser": true,
