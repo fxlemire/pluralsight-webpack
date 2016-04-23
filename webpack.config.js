@@ -29,7 +29,7 @@ module.exports = {
         loader: 'style!css!postcss!sass'
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|ttf|eot)$/,
         exclude: /node_modules/,
         loader: 'url?limit=8192'
       }
