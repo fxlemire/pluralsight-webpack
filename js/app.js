@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import config from '../config/config.json';
+import {} from './login';
 
 console.log('App loaded!');
-console.log(config.app_loaded_msg);
+$('#testDiv').text('jQuery modified this content (see app.js)');
