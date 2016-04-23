@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-require('../css/app.scss');
-require('../css/bootstrap.css');
+import {} from './login';
 
-console.log('App loaded');
+console.log('App loaded!');
+$('#testDiv').text('jQuery modified this content (see app.js)');
