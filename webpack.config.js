@@ -1,8 +1,7 @@
-const autoprefixer = require('autoprefixer');
 const path = require('path');
 
 module.exports = {
-  context: path.resolve('js'),
+  context: path.resolve('public/js'),
 
   devServer: {
     contentBase: 'public'
@@ -21,22 +20,10 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: 'style!css!postcss'
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        loader: 'style!css!postcss!sass'
-      },
-      {
-        test: /\.(png|jpg|ttf|eot)$/,
-        exclude: /node_modules/,
-        loader: 'url?limit=8192'
+        loader: 'style!css'
       }
     ]
   },
-
-  postcss: () => [autoprefixer],
 
   resolve: {
     extensions: ['', '.js'] // default config. add more extensions when needed
