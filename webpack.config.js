@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  context: path.resolve('public/js'),
+  context: path.resolve('js'),
 
   devServer: {
     contentBase: 'public'
@@ -10,17 +10,22 @@ module.exports = {
   entry: ['./app'],
 
   output: {
-    path: path.resolve('build/'),
-    publicPath: '/public/assets/',
+    path: path.resolve('build/js'),
+    publicPath: '/public/assets/js',
     filename: 'bundle.js'
   },
 
   module: {
     loaders: [
       {
-        test: /\.css$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'style!css'
+        loader: 'babel'
+      },
+      {
+        test: /\.json$/,
+        exclude: /node_modules/,
+        loader: `json!${path.resolve('loaders/strip')}`
       }
     ]
   },
