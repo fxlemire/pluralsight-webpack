@@ -192,7 +192,8 @@
     "yield-star-spacing": [2, {"before": false, "after": true}]
   },
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "angular"
   ],
   "env": {
     "browser": true,

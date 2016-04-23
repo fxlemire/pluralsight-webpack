@@ -1,6 +1,11 @@
 /* eslint-disable no-console */
 import angular from 'angular';
+import bandInfo from './bands/band-info';
+import bandList from './bands/bandList';
 
-const app = angular.module('app', []);
+angular.module('app', []);
 
-console.log(app);
+bandInfo('app');
+bandList('app');
+
+console.log(angular.module('app'));
