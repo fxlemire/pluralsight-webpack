@@ -7,7 +7,7 @@ module.exports = {
     contentBase: 'public'
   },
 
-  entry: ['./utils', './app'],
+  entry: ['./index'],
 
   output: {
     path: path.resolve('build/js'),
