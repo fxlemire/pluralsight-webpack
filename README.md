@@ -1,4 +1,4 @@
-Pluralsight React Webpack
+Pluralsight Webpack
 =========================
 This repo is the product of following [Joe Eames](https://twitter.com/josepheames)'s class:
 [Webpack Fundamentals](http://app.pluralsight.com/courses/webpack-fundamentals).
